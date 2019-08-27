@@ -20,6 +20,7 @@
             text-align: center;
             font-size: 18px;
         }
+
         .container {
             background: lightblue;
             padding: 15px;
@@ -27,12 +28,14 @@
             margin-top: 10px;
             box-shadow: 2px 5px #ccc;
         }
+
         form {
             padding: 10px;
             margin-top: 20px;
         }
 
-        form input, button {
+        form input,
+        button {
             padding: 10px;
             border-radius: 5px;
             border: none;
@@ -41,6 +44,7 @@
         p {
             padding: 5px;
         }
+
         span {
             padding: 5px;
             font-weight: bold;
