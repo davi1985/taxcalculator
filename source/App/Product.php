@@ -48,7 +48,7 @@ class Product
     {
         return 'R$ '. number_format($this->taxValue, '2', ',', '.');
     }
-    
+
     /**
      * @return string
      */
