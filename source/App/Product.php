@@ -2,6 +2,10 @@
 
 namespace Source\App;
 
+/**
+ * Class Product
+ * @package Source\App
+ */
 class Product
 {
     private $value;
@@ -9,28 +13,51 @@ class Product
     private $taxValue;
     private $totalPrice;
 
-    public function __construct($value, $tax)
+
+    /**
+     * Product constructor.
+     * @param float $value
+     * @param float $tax
+     */
+    public function __construct(float $value, float $tax)
     {
         $this->value = floatval($value);
         $this->taxValue = floatval($value) * floatval($tax) / 100;
         $this->tax = floatval($tax);
     }
 
-    public function getValue()
+
+    /**
+     * @return string
+     */
+    public function getValue() : string
     {
         return 'R$ '.number_format($this->value, '2', ',','.');
     }
-    public function getTax()
+
+
+    /**
+     * @return string
+     */
+    public function getTax() : string
     {
         return $this->tax.'%';
     }
 
-    public function getTaxValue()
+
+    /**
+     * @return string
+     */
+    public function getTaxValue() : string
     {
         return 'R$ '. number_format($this->taxValue, '2', ',', '.');
     }
 
-    public function totalPrice()
+
+    /**
+     * @return string
+     */
+    public function totalPrice() : string
     {
         $price = $this->value + $this->tax;
         return 'R$ '.number_format($price, '2', ',' , '.');
