@@ -7,7 +7,7 @@ if (isset($_POST['productValue']) && !empty($_POST['productValue'])) {
         $_POST['taxValue']
     );
 } else {
-    $product = new \Source\App\Product("","");
+    $product = new \Source\App\Product(null, null);
 }
 
 require 'calculate.view.php';

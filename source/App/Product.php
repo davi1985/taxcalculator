@@ -15,10 +15,10 @@ class Product
 
     /**
      * Product constructor.
-     * @param float $value
-     * @param float $tax
+     * @param $value
+     * @param $tax
      */
-    public function __construct(float $value, float $tax)
+    public function __construct($value, $tax)
     {
         $this->value = floatval($value);
         $this->taxValue = floatval($value) * floatval($tax) / 100;
@@ -28,34 +28,33 @@ class Product
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
-        return 'R$ '.number_format($this->value, '2', ',','.');
+        return 'R$ ' . number_format($this->value, '2', ',', '.');
     }
 
     /**
      * @return string
      */
-    public function getTax() : string
+    public function getTax(): string
     {
-        return $this->tax.'%';
+        return $this->tax . '%';
     }
 
     /**
      * @return string
      */
-    public function getTaxValue() : string
+    public function getTaxValue(): string
     {
-        return 'R$ '. number_format($this->taxValue, '2', ',', '.');
+        return 'R$ ' . number_format($this->taxValue, '2', ',', '.');
     }
 
     /**
      * @return string
      */
-    public function totalPrice() : string
+    public function totalPrice(): string
     {
-        $price = $this->value + $this->tax;
-        return 'R$ '.number_format($price, '2', ',' , '.');
+        $price = ($this->value) + ($this->taxValue);
+        return 'R$ ' . number_format($price, '2', ',', '.');
     }
-
 }
