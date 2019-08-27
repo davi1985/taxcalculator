@@ -13,7 +13,6 @@ class Product
     private $taxValue;
     private $totalPrice;
 
-
     /**
      * Product constructor.
      * @param float $value
@@ -26,7 +25,6 @@ class Product
         $this->tax = floatval($tax);
     }
 
-
     /**
      * @return string
      */
@@ -34,7 +32,6 @@ class Product
     {
         return 'R$ '.number_format($this->value, '2', ',','.');
     }
-
 
     /**
      * @return string
@@ -44,7 +41,6 @@ class Product
         return $this->tax.'%';
     }
 
-
     /**
      * @return string
      */
@@ -52,8 +48,7 @@ class Product
     {
         return 'R$ '. number_format($this->taxValue, '2', ',', '.');
     }
-
-
+    
     /**
      * @return string
      */
